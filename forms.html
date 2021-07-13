@@ -3,35 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forms Demo</title>
+    <title>Race Register Form</title>
   </head>
   <body>
-    <h1>Forms</h1>
-    <!-- Formas de criar um Formulário com seu determinado tipo de ação-->
-    <form action="/tacos">
-      <p>
-        <label for="username">Enter a username:</label>
-        <input id="username" type="text" placeholder="username" />
-      </p>
+    <h1>Race Registration!!</h1>
+
+    <form action="/Register">
+      <label for="First name"><b>First Name</b></label>
+      <input type="text" id="First name" name="First name" required />
+
+      <label for="Last name"><b>Last Name</b></label>
+      <input type="text" id="Last name" name="Last name" required />
+
+      <p>Select a Race:</p>
+
+      <input type="radio" id="Fun" name="size" value="Fun"/>
+      <label for="Fun"><b>Fun Run SK</b></label>
 
       <p>
-        <label for="password">Enter a password:</label>
-        <input id="password" type="password" placeholder="password" />
+        <input type="radio" id="Half" name="size" value="Half"/>
+        <label for="Half"><b>Half Marathon</b></label>
       </p>
 
+      <input type="radio" id="Full" name="size" value="Full"/>
+      <label for="Full"><b>Full Marathon</b></label>
       <p>
-        <label for="number">Enter a number:</label>
-        <input id="number" type="number" placeholder=" enter a number" />
+        <label for="Email"><b>Email</b></label>
+        <input type="email" id="Email" name="Email" required />
+
+        <label for="Password"><b>Password</b></label>
+        <input type="password" id="Password" name="password" required />
       </p>
 
-      <p>
-        <label for="color">Enter a color:</label>
-        <input id="color " type="color" />
-      </p>
-
-      <p>
-        <button>Submite</button>
-      </p>
+      <div>
+        <label for="division"><b>Select Age Group</b></label>
+        <select name="division" id="division">
+          <option value="Kids">Under 18</option>
+          <option value="ya">18-30</option>
+          <option value="Adults">30-50</option>
+          <option value="seniors">50+</option>
+        </select>
+      </div>
+      <button>Register!</button>
     </form>
   </body>
 </html>
